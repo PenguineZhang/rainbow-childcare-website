@@ -1,8 +1,9 @@
 import React from "react";
+import "./index.scss";
 
 function AboutUs() {
   return (
-    <div>
+    <div className='about-us'>
       Little Sprouts is San Diego’s best Reggio preschool offering organic meals
       and serving the greater San Diego area including Poway, Mission Valley, La
       Mesa, Allied Gardens and Kensington. Our preschool was created to provide

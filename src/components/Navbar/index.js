@@ -1,11 +1,11 @@
-import { directive } from "@babel/types";
 import React from "react";
+import logo from "../../images/businessLogo.png";
 import "./index.scss";
 
 const Navbar = () => {
   return (
     <div className='nav-container'>
-      <div className='nav-left'>LOGO PLACEHOLDER</div>
+      <img src={logo} alt='' />
 
       <div className='nav-right'>
         <ul>

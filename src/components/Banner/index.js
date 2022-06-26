@@ -1,16 +1,15 @@
 import React from "react";
-import rainbow from "../../images/rainbow.jpeg";
+import rainbow from "../../images/bannerBg.jpg";
 import kids from "../../images/kids.png";
 import "./index.scss";
+import { Parallax } from "react-parallax";
 
 function Banner() {
   return (
     <div className='banner-container'>
-      <header>
-        <img src={rainbow} className='background' />
-        <img src={kids} className='foreground' />
-        <h1 className='title'>Rainbow Family Care</h1>
-      </header>
+      <Parallax strength={700} bgImage={rainbow}>
+        <div className='content'>rainbow care</div>
+      </Parallax>
     </div>
   );
 }
