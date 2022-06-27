@@ -1,0 +1,37 @@
+.burger-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+}
+
+.burger span {
+  background: black;
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin-bottom: 6px;
+  position: relative;
+  top: 0;
+  transition: all ease-in-out 0.4s;
+}
+
+.burger-container.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+.burger-container.open span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+.burger-container.open span:nth-child(3) {
+  transform: rotate(45deg);
+  top: -6px;
+}

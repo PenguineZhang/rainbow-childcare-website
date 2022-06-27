@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../images/businessLogo.png";
 import "./index.scss";
+import BurgerMenu from "../BurgerMenu";
 
 const Navbar = () => {
   return (
@@ -14,6 +15,7 @@ const Navbar = () => {
           <li>Contact Us</li>
         </ul>
       </div>
+      <BurgerMenu />
     </div>
   );
 };
