@@ -1,4 +1,34 @@
 .about-us {
-  height: 100vh;
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: aquamarine;
+  .aboutUs-block {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  .container1 {
+    background-color: rgb(145, 145, 233);
+  }
+  .container2 {
+    background-color: rgb(237, 237, 179);
+  }
+  .container3 {
+    background-color: rgb(218, 145, 145);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-us {
+    flex-direction: row;
+    height: 70vh;
+    justify-content: center;
+    .aboutUs-block {
+      margin-right: 10px;
+      box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+      max-width: 330px;
+    }
+  }
 }

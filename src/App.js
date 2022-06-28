@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
+import Queue from "./components/Queue";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Banner />
       <AboutUs />
+      <Queue />
     </div>
   );
 }

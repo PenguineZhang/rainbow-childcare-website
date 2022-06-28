@@ -7,7 +7,7 @@ import { Parallax } from "react-parallax";
 function Banner() {
   return (
     <div className='banner-container'>
-      <Parallax strength={700} bgImage={rainbow}>
+      <Parallax strength={600} bgImage={rainbow}>
         <div className='content'>rainbow care</div>
       </Parallax>
     </div>

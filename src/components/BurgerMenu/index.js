@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import "./index.scss";
 
-const BurgerMenu = () => {
-  const [showLinks, setShowLinks] = useState(false);
-
+const BurgerMenu = ({ showLinks, setShowLinks }) => {
   return (
     <div
       className={classnames("burger-container", { open: showLinks })}
