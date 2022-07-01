@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import "./index.scss";
 
 const Queue = () => {
-  const [userInfo, setUserInfo] = useState({
-    email: "",
-    name: "",
-    age: "",
-    gender: "",
-    dipper: false,
-  });
+  const [userInfo, setUserInfo] = useState([
+    {
+      email: "123",
+      name: "",
+      age: "",
+      gender: "",
+      dipper: "",
+    },
+  ]);
+
+  const handleUpdateItem = (e, item) => {
+    const newInfo = [...userInfo];
+    newInfo[0][item] = e.target.value;
+    console.log(newInfo);
+    // setUserInfo(newInfo);
+  };
 
   return (
     <div className='queueContainer'>
@@ -18,41 +27,67 @@ const Queue = () => {
         <div className='userInfoContainer'>
           <div className='wrapper'>
             <div className='title'>Email</div>
-            <input type='text' placeholder='Email' />
+            <input
+              type='text'
+              placeholder='Email'
+              value={userInfo[0].email}
+              onChange={(e) => handleUpdateItem(e, "email")}
+            />
           </div>
         </div>
 
         <div className='userInfoContainer'>
           <div className='wrapper'>
             <div className='title'>Kid's Name</div>
-            <input type='text' placeholder='Name' />
+            <input
+              type='text'
+              placeholder='Name'
+              value={userInfo[0].name}
+              onChange={(e) => handleUpdateItem(e, "name")}
+            />
           </div>
         </div>
 
         <div className='userInfoContainer'>
           <div className='wrapper'>
             <div className='title'>Kid's Age</div>
-            <input type='text' placeholder='Age' />
+            <input
+              type='text'
+              placeholder='Age'
+              value={userInfo[0].age}
+              onChange={(e) => handleUpdateItem(e, "age")}
+            />
           </div>
         </div>
 
         <div className='userInfoContainer'>
           <div className='wrapper'>
             <div className='title'>Kid's Gender</div>
-            <input type='text' placeholder='Gender' />
+            <input
+              type='text'
+              placeholder='Gender'
+              value={userInfo[0].gender}
+              onChange={(e) => handleUpdateItem(e, "gender")}
+            />
           </div>
         </div>
 
         <div className='userInfoContainer'>
           <div className='wrapper'>
             <div className='title'>Dipper usage</div>
-            <input type='dropdown' placeholder='Dipper' />
+            <input
+              type='dropdown'
+              placeholder='Dipper'
+              value={userInfo[0].dipper}
+              onChange={(e) => handleUpdateItem(e, "dipper")}
+            />
           </div>
         </div>
       </form>
 
       <button className='submitForm'>Submit</button>
       <p>Our staff will contact you shortly</p>
+      <div>{userInfo[0].email}</div>
     </div>
   );
 };
