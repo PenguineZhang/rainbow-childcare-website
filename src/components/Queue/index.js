@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./index.scss";
+import googleDocService from "../../service/googleDoc";
 
 const Queue = () => {
   const [userInfo, setUserInfo] = useState([
     {
-      email: "123",
+      email: "",
       name: "",
       age: "",
       gender: "",
@@ -12,11 +13,16 @@ const Queue = () => {
     },
   ]);
 
+  const handleSubmitInfo = (userInfo) => {
+    console.log("function calkled");
+    googleDocService.handlePostData(userInfo);
+  };
+
   const handleUpdateItem = (e, item) => {
     const newInfo = [...userInfo];
     newInfo[0][item] = e.target.value;
-    console.log(newInfo);
-    // setUserInfo(newInfo);
+    // console.log(newInfo);
+    setUserInfo(newInfo);
   };
 
   return (
@@ -85,7 +91,9 @@ const Queue = () => {
         </div>
       </form>
 
-      <button className='submitForm'>Submit</button>
+      <button className='submitForm' onClick={() => handleSubmitInfo(userInfo)}>
+        Submit
+      </button>
       <p>Our staff will contact you shortly</p>
       <div>{userInfo[0].email}</div>
     </div>
