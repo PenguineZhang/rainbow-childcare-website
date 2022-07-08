@@ -30,7 +30,7 @@ const Queue = () => {
       <h1>Schedule a visit</h1>
 
       <form action='' className='userInfo'>
-        <div className='userInfoContainer'>
+        <div className='userInfoContainer first'>
           <div className='wrapper'>
             <div className='title'>Email</div>
             <input
@@ -78,7 +78,7 @@ const Queue = () => {
           </div>
         </div>
 
-        <div className='userInfoContainer'>
+        <div className='userInfoContainer last'>
           <div className='wrapper'>
             <div className='title'>Dipper usage</div>
             <input

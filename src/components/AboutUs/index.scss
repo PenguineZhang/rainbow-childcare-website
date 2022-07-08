@@ -8,6 +8,7 @@
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
   }
   .container1 {
     background-color: rgb(145, 145, 233);
@@ -27,7 +28,7 @@
     justify-content: center;
     .aboutUs-block {
       margin-right: 10px;
-      box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+
       max-width: 330px;
     }
   }
