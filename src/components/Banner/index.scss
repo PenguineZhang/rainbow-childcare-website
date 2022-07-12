@@ -2,9 +2,12 @@
 }
 
 .content {
+  color: bisque;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 90px;
+  font-weight: bold;
+  text-shadow: 1px 3px #c1c1c1;
 }
